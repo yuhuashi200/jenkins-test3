@@ -26,7 +26,7 @@ spec:
         app: nginx-test3
     spec:
       containers:
-        - image: 'registry.cn-beijing.aliyuncs.com/sunac_k8s_test/sunac_repo_test:jenkins-demo:${build_tag}'
+        - image: 'registry.cn-beijing.aliyuncs.com/sunac_k8s_test/sunac_repo_test:jenkins-demo_${build_tag}'
           imagePullPolicy: Always
           name: nginx-test3
           resources:
@@ -74,7 +74,7 @@ spec:
         paths:
           - backend:
               serviceName: nginx-test3-svc
-              servicePort: 80
+              servicePort: 8057
             path: /
             pathType: ImplementationSpecific
 status:
